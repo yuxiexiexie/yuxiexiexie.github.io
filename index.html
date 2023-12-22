@@ -27,12 +27,27 @@
             font-size: 18px;
             line-height: 1.5;
             margin: 20px;
+            text-align: left;
+        }
+
+        .lyrics p:first-child {
+            color: #00FF00; /* Bright green for the first line */
+            font-size: 24px; /* Larger font size for the first line */
+        }
+
+        .lyrics p:nth-child(even) {
+            color: #FF0000; /* Red color for even lines */
+        }
+
+        .lyrics p:nth-child(odd) {
+            color: #00FF00; /* Bright green color for odd lines */
         }
     </style>
 </head>
 <body>
     <div class="tree"></div>
     <div class="lyrics">
+        <!-- 添加你的歌词 -->
         <p>Why sitting in the corner</p>
         <p>Why linger in the corner, feeling so alone,</p>
         <p>Ease up, darling, don't let tension intone.</p>
