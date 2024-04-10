@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuyuのlittle univers</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 添加图片样式 */
+        .spimg img {
+            max-width: 100%; /* 图片最大宽度为父元素宽度 */
+            height: auto; /* 图片高度自适应 */
+            max-height: 300px; /* 图片最大高度 */
+        }
+        /* 外部容器样式，使用 Flexbox 布局 */
+        .image-container {
+            display: flex; /* 使用 Flexbox 布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            flex-direction: column; /* 垂直排列子元素 */
+        }
+    </style>
+</head>
+<body style="background-color: black; color: white;">
+
+    <!-- 标题 -->
+    <h1 style="font-weight: bold;">江 湖 夜 雨 十 年 灯</h1>
+    <!-- 副标题 -->
+    <h4>Hey guys！WELCOME Here——</h4>
+    <h2>Something about me and I wanna talk:P</h2>
+    
+    <!-- 图片 -->
+    <div class="image-container"> <!-- 使用 Flexbox 布局 -->
+        <img src="tou1.jpg" alt="Image 1">
+    </div>
+    <h4>  </h4>
+    <div class="spimg"> <!-- 使用 Flexbox 布局 -->
+        <div class="image-container">
+            <img src="1.jpg" alt="Image 2">
+            <figcaption>Yuyu ＆ Zoey</figcaption>
+        </div>
+        
+    </div>
+
+    <!-- 文字自由段落及点击显示图片功能 -->
+    <div>
+        <p>是的你没看错，用黑白主题只是想显得高级lol</p>
+        <p></p>
+         <a href="#" class="showImageLink" data-image="path/to/p1.jpg">clickable link</a> to show Image 1.</p>
+        <div class="imageContainer" style="display: none;">
+            <img src="" alt="Image 1">
+        </div>
+    </div>
+
+    <!-- 另一个点击显示图片的功能 -->
+    <div>
+        <p> <a href="#" class="showImageLink" data-image="path/to/p2.jpg">clickable link</a> to show Image 2.</p>
+        <div class="imageContainer" style="display: none;">
+            <img src="" alt="Image 2">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle image visibility
+        const showImageLinks = document.querySelectorAll('.showImageLink');
+        
+        showImageLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const imageContainer = this.nextElementSibling;
+                const imagePath = this.getAttribute('data-image');
+                const image = imageContainer.querySelector('img');
+                
+                if (imagePath && image) {
+                    image.src = imagePath;
+                    imageContainer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

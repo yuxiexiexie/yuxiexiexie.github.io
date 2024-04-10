@@ -1,12 +1,29 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+/* style.css */
+
+/* 设置标题样式 */
+h1 {
+    color: white; /* 设置标题颜色 */
+    font-weight: bold; /* 设置标题加粗 */
 }
 
-.christmas-tree {
-  font-size: 20px;
-  color: green;
+/* 设置副标题样式 */
+h2 {
+    color: white; /* 设置副标题颜色 */
+    font-size: 16px; /* 设置副标题字体大小 */
+}
+
+/* 设置图片样式 */
+img {
+    max-width: 100%; /* 图片最大宽度为父元素宽度 */
+    height: auto; /* 图片高度自适应 */
+}
+
+/* 设置段落样式 */
+p {
+    color: white; /* 设置段落文字颜色 */
+}
+
+/* 设置超链接样式 */
+a {
+    color: white; /* 设置超链接文字颜色 */
 }
